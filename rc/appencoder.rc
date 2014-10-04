@@ -1,0 +1,128 @@
+///////////////////////////////////////////////////
+//
+// THIS FILE SHOULD NOT BE EDITED USING A TEXT
+// EDITOR OR 3RD PARTY RESOURCE EDITOR, EXCEPT
+// WHEN SPECIFICALLY INSTRUCTED BY I.S.S.
+//
+///////////////////////////////////////////////////
+//
+// Winteracter resource script. 
+//
+// Modified : 16/Mar/2014 20:57:38
+//
+///////////////////////////////////////////////////
+//
+// Include files
+//
+#include "winparam.h"
+ 
+///////////////////////////////////////////////////
+//
+// Parameter Definitions
+//
+#define ID_EXIT                          1001
+#define IDD_DIALOG_MAIN                   102
+#define ID_OPEN                          1002
+#define IDF_SERIAL                       1003
+#define IDF_CLEANTERMINAL                1004
+#define ID_STOP                          1005
+#define IDF_PLOT                         1006
+#define ID_START                         1007
+#define IDF_PORT                         1008
+#define IDF_DRAW                         1009
+#define IDF_GROUP1                       1010
+#define IDF_RADIO12                      1011
+#define IDF_RADIO14                      1012
+#define IDF_RADIO15                      1013
+#define IDF_RADIO16                      1014
+#define IDF_RADIO17                      1015
+#define IDF_GETDATA                      1016
+#define IDF_LABEL1                       1017
+#define IDF_DATASET                      1018
+#define IDF_NUMDATA                      1019
+#define IDF_LABEL2                       1020
+#define IDF_YAXES                        1021
+#define IDF_LABEL4                       1022
+#define IDF_LABEL6                       1023
+#define IDF_SAVE                         1026
+#define IDF_LABEL5                       1025
+#define IDF_GRADOSGIRADOS                1027
+
+///////////////////////////////////////////////////
+//
+// Dialogs
+//
+IDD_DIALOG_MAIN DIALOG 0, 0,  659,  350
+STYLE WS_POPUP | WS_BORDER | WS_DLGFRAME | WS_SYSMENU | WS_MINIMIZEBOX | DS_3DLOOK | DS_MODALFRAME
+FONT    8, "MS Sans Serif"
+CAPTION "AppEncoder Interface v 1.0"
+BEGIN
+    CONTROL "EXIT",ID_EXIT,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_DEFPUSHBUTTON | BS_TEXT,  596,  288,   50,   18
+    CONTROL "",IDF_SERIAL,"EDIT",WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_GROUP | WS_TABSTOP | ES_LEFT | ES_MULTILINE | ES_READONLY,  482,  184,  114,   67
+    CONTROL "CLEAR",IDF_CLEANTERMINAL,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | BS_TEXT,  600,  235,   40,   14
+    CONTROL "PLOT",IDF_PLOT,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | BS_TEXT,  410,  296,   40,   14
+    CONTROL "START",ID_START,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_DEFPUSHBUTTON | BS_TEXT,  540,  288,   50,   18
+    CONTROL "3",IDF_PORT,"EDIT",WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP | ES_LEFT,  538,   35,   40,   14
+    CONTROL "",IDF_DRAW,"STATIC",WS_CHILD | WS_VISIBLE | WS_GROUP | SS_BLACKFRAME | SS_NOTIFY | SS_CENTERIMAGE,   20,   16,  432,  264
+    CONTROL "OPEN",ID_OPEN,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_DEFPUSHBUTTON | BS_TEXT,  480,   32,   50,   18
+    CONTROL "STOP",ID_STOP,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_DEFPUSHBUTTON | BS_TEXT,  486,  288,   50,   18
+    CONTROL "Grados",IDF_GROUP1,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | BS_GROUPBOX | BS_TEXT,  482,   68,  118,  100
+    CONTROL "GET DATA",IDF_GETDATA,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | BS_TEXT,  360,  296,   44,   14
+    CONTROL "APP ENCODER INTERFACE V 1.0",IDF_LABEL1,"STATIC",WS_CHILD | WS_VISIBLE | WS_GROUP | SS_CENTER,  474,    8,  168,   16
+    CONTROL "",IDF_DATASET,"EDIT",WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP | ES_LEFT | ES_READONLY,  360,  316,   40,   14
+    CONTROL "",IDF_NUMDATA,"EDIT",WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP | ES_LEFT,  300,  300,   40,   14
+    CONTROL "#datos",IDF_LABEL2,"STATIC",WS_CHILD | WS_VISIBLE | WS_GROUP | SS_LEFT,  300,  288,   40,    8
+    CONTROL "1",IDF_YAXES,"EDIT",WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP | ES_LEFT,   50,  299,   40,   14
+    CONTROL "Y axes:",IDF_LABEL4,"STATIC",WS_CHILD | WS_VISIBLE | WS_GROUP | SS_LEFT,   12,  300,   40,   12
+    CONTROL "ms",IDF_LABEL6,"STATIC",WS_CHILD | WS_VISIBLE | WS_GROUP | SS_LEFT,   92,  301,   40,    8
+    CONTROL "1",IDF_RADIO12,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_AUTORADIOBUTTON | BS_TEXT,  514,   80,   40,   14
+    CONTROL "2",IDF_RADIO14,"BUTTON",WS_CHILD | WS_VISIBLE | WS_TABSTOP | BS_AUTORADIOBUTTON | BS_TEXT,  514,   96,   40,   14
+    CONTROL "3",IDF_RADIO15,"BUTTON",WS_CHILD | WS_VISIBLE | WS_TABSTOP | BS_AUTORADIOBUTTON | BS_TEXT,  514,  112,   40,   14
+    CONTROL "4",IDF_RADIO16,"BUTTON",WS_CHILD | WS_VISIBLE | WS_TABSTOP | BS_AUTORADIOBUTTON | BS_TEXT,  514,  128,   40,   14
+    CONTROL "5",IDF_RADIO17,"BUTTON",WS_CHILD | WS_VISIBLE | WS_TABSTOP | BS_AUTORADIOBUTTON | BS_TEXT,  514,  144,   40,   14
+    CONTROL "SAVE",IDF_SAVE,"BUTTON",WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | BS_TEXT,  138,  296,   40,   14
+    CONTROL "#Grados",IDF_LABEL5,"STATIC",WS_CHILD | WS_VISIBLE | WS_GROUP | SS_LEFT,  227,  287,   40,    8
+    CONTROL "",IDF_GRADOSGIRADOS,"EDIT",WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP | ES_LEFT,  226,  300,   64,   14
+END
+
+IDD_DIALOG_MAIN RCDATA
+BEGIN
+"[Checks] \n"
+" 1011 1 \n"
+" 1012 0 \n"
+" 1013 0 \n"
+" 1014 0 \n"
+" 1015 0 \n"
+"[Ranges] \n"
+"[Fonts] \n"
+" 1017   10 MS Sans Serif, 700 0 \n"
+" 1022   10 MS Sans Serif, 400 0 \n"
+"[Colours] \n"
+" 1017 255 000 000 256 256 256 \n"
+"[Formats] \n"
+,0
+END
+
+///////////////////////////////////////////////////
+//
+// Icons
+//
+ICON1                           ICON   DISCARDABLE "icon"
+
+///////////////////////////////////////////////////
+//
+// Winteracter Visual Tool Settings
+//
+//*WI* BASEMENU    30001
+//*WI* BASEITEM    40001
+//*WI* BASEDIALOG    101
+//*WI* BASEFIELD    1001
+//*WI* BASETOOLBAR 30101
+//*WI* BASEBUTTON  40101
+//*WI* BASEIMAGE    2001
+//*WI* F90MODULE   1
+//*WI* FORTSAVE    1
+//*WI* FILENAME    resource.f90
+//*WI* FMODNAME    RESOURCE
+//*WI* LASTTYPE        2
+//*WI* LASTRES         1
